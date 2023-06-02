@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Our Story</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type = "text/javascript">
+    window.addEventListener( "load", start, false );
+    function start()
+    {
+    document.getElementById("picture").addEventListener("mouseover", over, false );
+    document.getElementById("picture").addEventListener("mouseout", out, false );
+
+    }
+
+    function over(e)
+    {
+     document.getElementById("picture").setAttribute( "src", "Munnar.png");
+    }
+
+    function out(e)
+    {
+    e.target.setAttribute("src", "cofee-arabica.jpg");
+    }
+    function moveone()
+    {
+    document.getElementById("move").innerHTML ="Our story";
+    }
+    
+</script>
+</head>
+<body>
+
+<div class="container">
+  <h1 id="move" onmousemove="moveone()" style="text-align: center; color: purple;">About Us</h1>
+  <div class="text-center">
+    <img src="Munnar.png" id="picture" alt="">
+  </div><br><br>
+  	<div class="row">
+    		<div class="col-md-6 col-xs-6 ">
+          <div class="text-center">
+                <img src="aruka.jpg" class="img-thumbnail">
+          </div>
+        </div>
+    		<div class="col-md-6 col-xs-6 ">
+                <h1 style=" color: blueviolet;">PASSIONATE HUMAN CHAIN</h1>
+                <h3>Unique Social model</h3>
+                <p>Since 2001, our farmers, coffee and agricultural experts have worked together to create this unique distribution model in the coffee world: a new form of social enterprise that is committed to delivering shared value, where the business does well while also doing good for the community.</p>
+        </div>
+  	</div>
+    <br><br>
+      <div class="row">
+        <div class="col-md-6 col-xs-6 ">
+            <h1 style="color: blueviolet;">SPECIALTY COFFEE<br></h1>
+               <h3> A unique taste profile</h3>
+                <p>It is a pure arabica with a rare aromatic profile combining smoothness, balance and roundness. It is created by our French coffeeologist Hippolyte Courty, guaranteeing utmost quality at each step, from the plantation to the cup.</p>
+        </div>
+        <div class="col-md-6 col-xs-6 ">
+          <div class="text-center">
+            <img src="bean.jpg">
+          </div>
+          </div>
+      </div><br><br>
+      <div class="row">
+    		<div class="col-md-6 col-xs-6 ">
+          <div class="text-center">
+                <img src="coffee-powder.png" class="rounded-circle">
+              </div>
+        </div>
+    		<div class="col-md-6 col-xs-6 ">
+                <h1 style="color: blueviolet;">BENEFITS OF FILTER COFFEE</h1>
+                <h3>Instant coffee</h3>
+                <p>Coffee powder is an ingredient to make drinks such as black coffee, milk coffee, latte art, etc., which can be used for making cakes or face. The current coffee powder is mixed by many businesses with other ingredients such as corn flour, roasted soybean meal, burnt rice ... for profit..</p>
+        </div>
+  	</div>
+    <br><br>
+<a href="webtech.html"><h4 onclick="this.innerHTML='Welcome to home page!'"style="text-align: center; color: blueviolet;">Click here.It will direct to home page...</h4></a>
+</div>
+
+</body>
+</html>

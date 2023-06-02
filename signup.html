@@ -1,0 +1,65 @@
+<html>  
+<head>  
+<title> SignUp Page</title>  
+
+<script type="text/javascript">  
+        function myFunction(x) {
+          x.style.background = "pink";
+        }
+        function blurFunction(x){
+                x.style.background="lavender";
+        }
+
+        function create_account(){  
+        var n=document.getElementById("name").value;  
+        var e=document.getElementById("email").value;  
+        var p=document.getElementById("pass").value;  
+        var cp=document.getElementById("confirm").value;  
+                var letters = /^[A-Za-z]+$/;  
+                var email_val = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
+        if(n==''||e==''||p==''||cp==''){  
+        alert("Enter each details correctly");  
+        }  
+        else if(!letters.test(n))  
+                {  
+                    alert('Name is incorrect must contain alphabets only');  
+                }  
+        else if (!email_val.test(e))  
+                {  
+                    alert('Invalid email format please enter valid email id');  
+                }  
+        else if(p!=cp)  
+        {  
+        alert("Passwords not matching");  
+        }  
+        else if(p.length > 12)  
+        {  
+        alert("Password maximum length is 12");  
+        }  
+        else if(p.length < 6)  
+        {  
+        alert("Password minimum length is 6");  
+        }  
+        else{  
+        alert("Your account has been created successfully... Let us share you about our story.");  
+        window.location="file:///D:/Web%20tech/grid.html";  
+        }  
+        }  
+        </script>  
+</head>  
+<body align="center" style="background-color: papayawhip;">  
+<h1 style="color: blueviolet; background-color: lavender;"> CREATE YOUR ACCOUNT</h1>  
+<table cellspacing="2" align="center" cellpadding="8" border="0" style="background-color: papayawhip;">  
+<tr><td> Name</td>   
+<td><input type="text" placeholder="Enter your name" id="name" onfocus="myFunction(this)" onblur="blurFunction(this)"></td></tr>  
+<tr><td>Email </td>  
+<td><input type="text" placeholder="Enter your email id" id="email" onfocus="myFunction(this)" onblur="blurFunction(this)"></td></tr>  
+<tr><td> Set Password</td>  
+<td><input type="password" placeholder="Set a password" id="pass" onfocus="myFunction(this)" onblur="blurFunction(this)"></td></tr>  
+<tr><td>Confirm Password</td>  
+<td><input type="password" placeholder="Confirm your password" id="confirm" onfocus="myFunction(this)" onblur="blurFunction(this)"></td></tr>  
+<tr><td>  
+<input type="submit" value="Create" onClick="create_account()"/>  
+</table>  
+</body>  
+</html>  

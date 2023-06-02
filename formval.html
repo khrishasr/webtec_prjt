@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> a coffee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script type="text/javascript">
+   window.addEventListener("load",start,false);
+    function start()
+    {
+      window.alert("Welcome to our coffee website.You can order your coffee pake");
+      document.getElementById("fname").addEventListener("focus",focusone,false);      
+      document.getElementById("fname").addEventListener("blur",blurone,false);      
+      document.getElementById("form").addEventListener("submit",subfun,false);      
+      document.getElementById("form").addEventListener("reset",resetfun,false);      
+    }
+    function focusone(){
+      document.getElementById("help").innerHTML="Enter name";
+    }
+    function blurone() {
+      document.getElementById("help").innerHTML="" ;
+    }
+    function subfun() {
+      window.alert("Are you sure that you want to submit");
+      window.alert("Thank you for ordering our coffee");
+    }
+    function resetfun() {
+      window.alert("Are you want to reset");
+    }
+    
+
+  </script>
+
+</head>
+<body>
+
+<div class="container">
+  <h1> Place your order </h1>
+  <form id="form" action="webtech.html">
+    <div class="form-group">
+      <label>  FirstName</label>
+    <input type="text" class="form-control" name="textF" id="fname" size="40" placeholder="Enter your name" required>
+  
+     <label>LastName</label>
+    <input type="text" class="form-control" name="textL" id="fname" placeholder="Enter your father's name" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+      
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" maxlength="5" placeholder="Enter password" name="pwd" required>
+    </div>
+
+    <label>Mobile no</label>
+    <input type="number" class="form-control"><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="m">
+    <label> Male</label>
+    <input type="radio" id="female" name="gender" value="f">
+    <label>  Female</label><br><br>
+
+    <label>Date of Birth:<input type="date" class="form-control" name="birthDate" required></label><br><br>
+
+    <label>Pack Type
+      <select name="Pack Type" class="custom-select">
+          <option>--None--</option>
+          <option>coffee beans</option>
+          <option>pack</option>
+          <option>powder</option>
+      </select>
+      </label><br><br>
+      <label>Grind
+    <select name="Grind" class="custom-select">
+      <option>Choose your option</option>
+      <option>Microlot 1.23</option>
+      <option>Microlot 4.22</option>
+      <option>Pocket Brew-Selection</option>
+      <option>Pocket Brew-Micro Climate</option>
+      <option>Grand Reserve</option>
+      <option>Micro Climate</option>
+      <option>Selection</option>
+      <option>Signature</option>
+    </select>
+    </label><br><br>
+
+          <label>
+              Address :
+              <br />
+              <textarea name="address" id="help" class="form-control" cols="120" rows="3"></textarea>
+          </label><br><br>
+
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" id="sub" class="btn btn-default">Submit</button>
+  <input type="reset" id="reset" value ="reset">
+  </form>
+
+</div>
+
+</body>
+</html>

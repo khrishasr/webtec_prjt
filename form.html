@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Order</title>
+<script>
+    function mymessage() {
+      alert("You can enjoy your day by ordering our coffee");
+    }
+    function myFunction(x) {
+  x.style.background = "pink";
+}
+    </script>
+</head>
+<body onload="mymessage()">
+<form action="web.html">
+	<fieldset>
+	<legend>Place your order</legend>
+<p>
+		<label>First name: <input type="text" name="name" maxlength="5" required onfocus="myFunction(this)"/></label>
+<p>
+		<label>Last name: <input type="text" name="name" onfocus="myFunction(this)"/></label>
+	</p>
+<p>
+		Gender :
+		<label><input type="radio" name="gender" value="male" /> Male</label>
+		<label><input type="radio" name="gender" value="female" /> Female</label>
+	</p>
+<p>
+		<label>Email:<input type="email" name="email" /></label>
+	</p>
+<p>
+		<label>Date of Birth:<input type="date" name="birthDate"></label>
+	</p>
+	<p>
+		<label>Phone Number:<input type="number" name="number" /></label>
+	</p>
+    Password: <input type="password" name="password"><br/>
+	<p>
+		<label>Pack Type
+			<select name="Pack Type">
+				<option>--None--</option>
+				<option>coffee beans</option>
+				<option>pack</option>
+				<option>powder</option>
+			</select>
+			</label>
+	</p>
+	<p>
+		<label>Grind
+			<select name="Grind">
+				<option>Choose your option</option>
+				<option>Microlot 1.23</option>
+				<option>Microlot 4.22</option>
+				<option>Pocket Brew-Selection</option>
+				<option>Pocket Brew-Micro Climate</option>
+				<option>Grand Reserve</option>
+				<option>Micro Climate</option>
+				<option>Selection</option>
+				<option>Signature</option>
+			</select>
+			</label>
+	</p>
+<p>
+		<label>
+		Address :
+		<br />
+		<textarea name="address" cols="30" rows="3"></textarea>
+		</label>
+	</p>
+<p>
+		<input type="submit" value="register">
+	</p>
+	</fieldset>
+</form>
+<img src="menu.png" alt="menubar">
+</body>
+</html>
